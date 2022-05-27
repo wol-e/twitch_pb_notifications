@@ -6,13 +6,10 @@ from pbn.twitch_api.streams import save_thumbnail
 if __name__ == "__main__":
     client = get_client()
 
-    files = save_thumbnail(
-        user_logins=[
-            "ArmadaUGS",
-            "larxa",
-        ],
+    user_login = "wilko"
+
+    save_thumbnail(
+        user_login=user_login,
         twitch_client=client,
         directory=os.getcwd() + "/data"
     )
-
-    print(files)
