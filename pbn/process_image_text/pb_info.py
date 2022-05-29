@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-class PBInfo(ABC):
+class PBInfoBase(ABC):
     def __init__(self, text):
         self.text = text
         self.current_time = self.get_current_time()

@@ -1,17 +1,19 @@
-def pb_info(text):
-    current_time = get_current_time(text)
-    last_delta = get_last_delta(text)
-    pb = get_pb(text)
+from pbn.process_image_text.pb_info import PBInfoBase
 
-    is_pb_pace = True if last_delta < 0 else False
-    fraction_of_run = get_fraction_of_time(current_time, pb)
 
-    data = {
-        "current_time": current_time,
-        "last_delta": last_delta,
-        "pb": pb,
-        "is_pb_pace": is_pb_pace,
-        "fraction_of_run": fraction_of_run
-    }
+class PBInfo(PBInfoBase):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.lines = self.get_lines()
 
-    return data
+    def get_current_time(self) -> float:
+        return 0
+
+    def get_pb(self) -> float:
+        return 0
+
+    def get_last_delta(self) -> float:
+        return 0
+
+    def get_lines(self):
+        return [l for l in self.text.split("\n") if l != ""]

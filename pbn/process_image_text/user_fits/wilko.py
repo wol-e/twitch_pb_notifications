@@ -1,7 +1,7 @@
 from pbn.process_image_text.pb_info import PBInfo
 
 
-class PBInfoUser(PBInfo):
+class PBInfo(PBInfo):
     def get_current_time(self) -> float:
         return 0
 
@@ -9,4 +9,4 @@ class PBInfoUser(PBInfo):
         return 0
 
     def get_last_delta(self) -> float:
-        return -1
+        return 0

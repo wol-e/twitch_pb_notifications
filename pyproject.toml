@@ -13,6 +13,7 @@ twitchAPI = "^2.5.3"
 python-twitch-client = "^0.7.1"
 python-dotenv = "^0.20.0"
 python-telegram-bot = "^20.0a0"
+numpy = "^1.22.4"
 
 [tool.poetry.dev-dependencies]
 
